@@ -5,120 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Onestop Veggies | Fresh Farm Produce Delivered Across Kenya</title>
   <meta name="description" content="Premium vegetables from farm to table, with fast WhatsApp ordering, availability updates, and contact forms." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <div class="top-bar">
-        <p>Fresh farm produce for hotels, supermarkets, retailers, and households.</p>
+        <p>Fresh farm produce for hotels, supermarkets, retailers, exporters, and households.</p>
         <a href="https://wa.me/254742623839" target="_blank" rel="noreferrer">Order on WhatsApp</a>
       </div>
       <div class="header-inner">
-        <div class="brand">
+        <a class="brand" href="#home" aria-label="Onestop Veggies home">
           <span class="brand-mark">O</span>
           <div>
             <p class="brand-name">Onestop Veggies</p>
-            <p class="brand-tag">Export-quality farm produce across Kenya</p>
+            <p class="brand-tag">Fresh farm produce, delivered across Kenya</p>
           </div>
-        </div>
-        <nav class="nav-links">
-          <a href="#home">Home</a>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="#products">Products</a>
-          <a href="#why">Why Us</a>
+          <a href="#home">Home</a>
           <a href="#availability">Availability</a>
           <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
           <a href="#contact">Contact</a>
+          <a href="#products" class="nav-pill">Search</a>
         </nav>
+        <div class="nav-actions">
+          <button class="icon-button" id="themeToggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+        </div>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNavDrawer">☰</button>
       </div>
     </header>
 
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <a class="brand mobile-brand" href="#home" aria-label="Onestop Veggies home">
+          <span class="brand-mark">O</span>
+          <div>
+            <p class="brand-name">Onestop Veggies</p>
+            <p class="brand-tag">Fresh farm produce, delivered across Kenya</p>
+          </div>
+        </a>
+        <button class="icon-button mobile-nav-close" id="mobileNavClose" type="button" aria-label="Close navigation">✕</button>
+      </div>
+      <nav class="mobile-nav-links" aria-label="Mobile navigation links">
+        <a href="#products">Products</a>
+        <a href="#home">Home</a>
+        <a href="#availability">Availability</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact">Request quote</a>
+        <a href="../sales-ledger.html">Login</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <a class="button button-alt" href="https://wa.me/254742623839" target="_blank" rel="noreferrer">Order on WhatsApp</a>
+        <button class="button mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙 Toggle theme</button>
+      </div>
+    </aside>
+
     <main>
+
+      <section id="products" class="section section-light">
+        <div class="section-head">
+          <p class="section-label">Onestop Veggies Featured Products. Browse our fresh farm produce</p>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <div class="data-placeholder">Loading available produce...</div>
+        </div>
+        <h2>Onestop Veggies product selection for wholesale and retail buyers</h2>
+        <p>Browse our most in-demand produce, each with availability and quick inquiry options for fast orders.</p>
+      </section>
+
       <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Premium Agricultural Supplier</p>
-          <h1>Fresh Farm Produce Delivered Across Kenya</h1>
-          <p class="hero-text">Premium quality vegetables direct from the farm. Fast WhatsApp ordering, export-grade produce, and reliable delivery.</p>
+          <p class="eyebrow">Premium agricultural supply partner</p>
+          <h1>Fresh produce, direct from the farm and ready for business.</h1>
+          <p class="hero-text">Reliable sourcing, fast delivery, and premium-quality vegetables and fruit for hotels, supermarkets, retailers, and exporters across Kenya.</p>
           <div class="hero-actions">
-            <a class="button" href="#products">View Products</a>
+            <a class="button" href="#products">Browse Products</a>
             <a class="button button-alt" href="https://wa.me/254742623839" target="_blank" rel="noreferrer">Order on WhatsApp</a>
+          </div>
+          <div class="hero-trust">
+            <span>★★★★★</span>
+            <p>Trusted by hotels, supermarkets, retailers, and exporters.</p>
           </div>
         </div>
       </section>
 
-      <section id="products" class="section section-light">
-        <div class="section-head">
-          <p class="section-label">Featured Produce</p>
-          <h2>Quality produce with fast inquiry buttons</h2>
-          <p>Browse our most demanded vegetables and fruit. Each product has availability status and direct WhatsApp inquiry links.</p>
-        </div>
-        <div class="product-grid">
-          <!-- <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=900&q=80" alt="Onions" />
-            <div class="product-body">
-              <h3>Onions</h3>
-              <p>Fresh red onions ready for retail and bulk deliveries across Nairobi and beyond.</p>
-              <div class="product-footer">
-                <span class="status available">Available</span>
-                <a href="https://wa.me/254104830294?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Onions" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
-          </article>-->
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=900&q=80" alt="Green Capsicum" />
-            <div class="product-body">
-              <h3>Green Capsicum</h3>
-              <p>Crisp green bell peppers for restaurants, supermarkets, and retailers.</p>
-              <div class="product-footer">
-                <span class="status available">Available</span>
-                <a href="https://wa.me/254742623839?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Green%20Capsicum" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
+      <section class="stats-section">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>150+</strong>
+            <span>Products</span>
           </article>
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=80" alt="Watermelon" />
-            <div class="product-body">
-              <h3>Watermelon</h3>
-              <p>Juicy watermelons for fresh markets, events, and wholesale orders.</p>
-              <div class="product-footer">
-                <span class="status limited">Out of Stock</span>
-                <a href="https://wa.me/254742623839?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Watermelon" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
+          <article class="stat-card">
+            <strong>3,800+</strong>
+            <span>Customers</span>
           </article>
-          <!-- <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80" alt="Tindora" />
-            <div class="product-body">
-              <h3>Tindora</h3>
-              <p>Seasonal knobbed gourd, ideal for fresh kitchens and wholesale deliveries.</p>
-              <div class="product-footer">
-                <span class="status available">Available</span>
-                <a href="https://wa.me/254104830294?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Tindora" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
-          </article> -->
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=900&q=80" alt="Yellow Capsicum" />
-            <div class="product-body">
-              <h3>Yellow Capsicum</h3>
-              <p>Sweet yellow peppers that add color and flavor to any menu.</p>
-              <div class="product-footer">
-                <span class="status available">Available</span>
-                <a href="https://wa.me/254742623839?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Yellow%20Capsicum" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
+          <article class="stat-card">
+            <strong>25+</strong>
+            <span>Delivery Vehicles</span>
           </article>
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=900&q=80" alt="Red Capsicum" />
-            <div class="product-body">
-              <h3>Red Capsicum</h3>
-              <p>Premium red bell peppers for fresh salads and high-end kitchens.</p>
-              <div class="product-footer">
-                <span class="status available">Available</span>
-                <a href="https://wa.me/254742623839?text=Hello%20Onestop%20Veggies%2C%20I%20need%20Red%20Capsicum" target="_blank" rel="noreferrer">WhatsApp Inquiry</a>
-              </div>
-            </div>
+          <article class="stat-card">
+            <strong>47</strong>
+            <span>Counties Served</span>
+          </article>
+          <article class="stat-card">
+            <strong>99%</strong>
+            <span>Customer Satisfaction</span>
           </article>
         </div>
       </section>
@@ -126,99 +128,111 @@
       <section id="why" class="section section-dark">
         <div class="section-head">
           <p class="section-label">Why Choose Us</p>
-          <h2>Trusted partner for large-scale agricultural buyers</h2>
-          <p>Fresh daily harvest, reliable delivery, export-quality produce, and direct farm-to-market supply.</p>
+          <h2>A dependable supply chain built for growing businesses</h2>
+          <p>From fresh harvests to last-mile delivery, every detail is designed to keep your operation moving.</p>
         </div>
         <div class="why-grid">
           <article class="why-card">
-            <span>🌿</span>
-            <h3>Farm-to-market supply</h3>
-            <p>Fresh produce sourced directly from our farms and delivered with speed.</p>
-          </article>
-          <article class="why-card">
             <span>🚚</span>
-            <h3>Reliable delivery</h3>
-            <p>We serve hotels, supermarkets, distributors, and exporters across Kenya.</p>
-          </article>
-          <article class="why-card">
-            <span>📦</span>
-            <h3>Export quality</h3>
-            <p>Produce packed and inspected to meet professional supply standards.</p>
+            <h3>Fast Delivery</h3>
+            <p>Daily dispatches and reliable transport keep your orders flowing on schedule.</p>
           </article>
           <article class="why-card">
             <span>🌱</span>
-            <h3>Fresh daily harvest</h3>
-            <p>Quality checks every day ensure produce arrives full of flavor.</p>
+            <h3>Fresh Harvest</h3>
+            <p>Produce is picked and packed with care, maintaining premium quality from farm to buyer.</p>
           </article>
           <article class="why-card">
-            <span>💼</span>
-            <h3>Wholesale ready</h3>
-            <p>Bulk orders are handled efficiently with clear stock updates.</p>
+            <span>📦</span>
+            <h3>Quality Packaging</h3>
+            <p>Our packing standards keep produce secure, clean, and presentation-ready.</p>
           </article>
           <article class="why-card">
-            <span>📞</span>
-            <h3>Customer support</h3>
-            <p>WhatsApp ordering and quick responses make ordering easy.</p>
+            <span>🌍</span>
+            <h3>Nationwide Supply</h3>
+            <p>We support a wide national network of customers in major counties and key markets.</p>
           </article>
         </div>
       </section>
 
       <section id="availability" class="section section-light">
         <div class="section-head">
-          <p class="section-label">Availability Board</p>
-          <h2>Current stock status</h2>
-          <p>Build urgency and let buyers know what is available now. Update this every day.</p>
+          <p class="section-label">Live Availability</p>
+          <h2>Current stock status, updated in real time</h2>
+          <p>See what is ready now, what is limited, and which lines are currently unavailable and when they will be available.</p>
         </div>
-        <div class="availability-table">
+        <div class="availability-table" id="availabilityTable">
           <div class="availability-row">
-            <strong>Red Capsicum</strong>
-            <span class="badge available">Available</span>
-          </div>
-          <div class="availability-row">
-            <strong>Watermelon</strong>
-            <span class="badge limited">Limited Stock</span>
-          </div>
-          <div class="availability-row">
-            <strong>Onions</strong>
-            <span class="badge unavailable">Out of Stock</span>
-          </div>
-          <div class="availability-row">
-            <strong>Green Capsicum</strong>
-            <span class="badge available">Available</span>
-          </div>
-          <div class="availability-row">
-            <strong>Yellow Capsicum</strong>
-            <span class="badge available">Available</span>
-          </div>
-          <div class="availability-row">
-            <strong>Tindora</strong>
-            <span class="badge unavailable">Out of Stock</span>
+            <strong>Loading produce availability...</strong>
+            <span class="badge limited">Please wait</span>
           </div>
         </div>
       </section>
 
-      <section id="gallery" class="section section-dark">
+      <section class="section section-dark testimonials-section">
+        <div class="section-head">
+          <p class="section-label">Customer Testimonials</p>
+          <h2>Trusted by businesses that need consistency</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent produce quality and dependable delivery. Our kitchen team loves the consistency."</p>
+            <strong>Hotel Manager</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Reliable supply and quick communication. They've become one of our preferred vendors."</p>
+            <strong>Supermarket Operations Lead</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Flexible ordering and fresh stock make it easy to plan menus and retail promotions."</p>
+            <strong>Retail Distributor</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="section section-light">
         <div class="section-head">
           <p class="section-label">Gallery</p>
-          <h2>Farm operations and our product journey</h2>
-          <p>Real images from harvesting, irrigation, packing, and delivery that show your professionalism.</p>
+          <h2>See our farm, packing, and delivery operations</h2>
+          <p>Real images from the field and the supply chain that show the strength of our business.</p>
         </div>
-        <div class="gallery-grid">
-          <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=900&q=80" alt="Farm with irrigation" />
-          <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=900&q=80" alt="Worker harvesting vegetables" />
-          <!--<img src="https://images.unsplash.com/photo-1592982375567-7b3930a7fecf?auto=format&fit=crop&w=900&q=80" alt="Trucks loading produce" />-->
-          <img src="./Assets/LorryGreen.jpeg" alt="Truck loading produce" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Produce packaging" />
-          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=900&q=80" alt="Warehouse storage" />
-          <!--<img src="https://images.unsplash.com/photo-1592982375567-7b3930a7fecf?auto=format&fit=crop&w=900&q=80" alt="Quality inspection" />-->
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="data-placeholder">Loading gallery images...</div>
+        </div>
+      </section>
+
+      <section class="section section-dark coverage-section">
+        <div class="section-head">
+          <p class="section-label">Business Coverage</p>
+          <h2>Serving key growth markets across Kenya</h2>
+        </div>
+        <div class="coverage-grid">
+          <div class="coverage-card">
+            <h3>Distribution hubs</h3>
+            <ul>
+              <li>Nairobi</li>
+              <li>Kiambu</li>
+              <li>Machakos</li>
+              <li>Kajiado</li>
+              <li>Nakuru</li>
+              <li>Kisumu</li>
+            </ul>
+          </div>
+          <div class="coverage-card coverage-map-card">
+            <h3>Customer reach</h3>
+            <p>We support hospitality, retail, food distribution, and export clients with dependable service and consistent produce quality.</p>
+          </div>
         </div>
       </section>
 
       <section id="about" class="section section-light">
         <div class="section-head">
           <p class="section-label">About Us</p>
-          <h2>Professional farming standards and supply capability</h2>
-          <p>Our story attracts hotels, supermarkets, distributors, and exporters who trust our delivery reliability and quality.</p>
+          <h2>Professional farming standards and dependable supply capability</h2>
+          <p>We combine field operations, packaging quality, and digital ordering to support a premium customer experience.</p>
         </div>
         <div class="about-grid">
           <div class="about-card">
@@ -240,7 +254,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-dark contact-section">
+      <section id="contact" class="section section-light contact-section">
         <div class="section-head">
           <p class="section-label">Contact</p>
           <h2>Get a quote or ask about availability</h2>
@@ -253,24 +267,146 @@
             <p><strong>Phone:</strong> <a href="tel:+254742623839">+254 742 623839</a></p>
             <p><strong>Email:</strong> <a href="mailto:ONESTOPVEGGIESLTD@GMAIL.COM">ONESTOPVEGGIESLTD@GMAIL.COM</a></p>
             <p><strong>Location:</strong> Langata, Nairobi, Kenya</p>
+            <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@onestop_veggies" target="_blank" rel="noreferrer">@onestop_veggies</a></p>
+            <div class="social-links" aria-label="Social media channels">
+              <a href="https://wa.me/254742623839" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.85 11.85 0 0 0 12.07 0C5.53 0 .2 5.32.2 11.86c0 2.09.55 4.13 1.58 5.94L0 24l6.37-1.68a11.82 11.82 0 0 0 5.7 1.46h.01c6.54 0 11.87-5.32 11.87-11.86 0-3.17-1.23-6.15-3.43-8.44ZM12.08 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.87 9.87 0 0 1-1.51-5.27c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.95 2.89a9.79 9.79 0 0 1 2.9 6.97c0 5.43-4.43 9.85-9.79 9.85Zm5.41-7.33c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.73.94-.9 1.13-.17.19-.34.22-.63.08-.29-.15-1.24-.46-2.35-1.47-.87-.78-1.45-1.75-1.62-2.04-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.55-.87-2.12-.23-.55-.47-.47-.64-.47h-.55c-.19 0-.49.07-.75.37-.26.29-.98.96-.98 2.35s1.01 2.74 1.15 2.93c.15.2 1.98 3.02 4.81 4.23.67.29 1.2.46 1.61.59.68.22 1.31.19 1.8.11.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"></path></svg>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 10.99 10.13 11.89v-8.41H7.08v-3.48h3.05V9.41c0-3.03 1.8-4.7 4.57-4.7 1.32 0 2.7.24 2.7.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.88v2.26h3.34l-.53 3.48h-2.81V24C19.61 23.06 24 18.09 24 12.07Z"></path></svg>
+              </a>
+              <a href="https://www.instagram.com/onestopveggies/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path></svg>
+              </a>
+              <a href="https://www.tiktok.com/@onestop_veggies" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 aria-label="Visit OneStopVeggies on TikTok" 
+                 class="tiktok-social-link">
+                <svg xmlns="http://w3.org" viewBox="0 0 448 512" aria-hidden="true" class="tiktok-icon">
+                  <!-- Official, clean TikTok vector path -->
+                  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,18.87Z"/>
+                </svg>
+              </a>
+            </div>
           </div>
-          <div class="contact-form-card">
-            <form action="https://formspree.io/f/xwvydyza"
-                method="POST"
-                enctype="multipart/form-data">
+          <div class="contact-info-card remark-card">
+            <h3>Leave your remarks</h3>
+            <p>Share feedback, a request, or a note about your experience.</p>
+            <form class="remark-form" action="https://formspree.io/f/xaqvadrd" method="POST">
+              <input type="hidden" name="_subject" value="New remark from Onestop Veggies landing page" />
+              <div class="form-group">
+                <label for="remarkName">Name</label>
+                <input id="remarkName" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="remarkEmail">Email</label>
+                <input id="remarkEmail" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label>Rate your experience</label>
+                <div class="rating-group" role="radiogroup" aria-label="Star rating">
+                  <label class="star-option"><input type="radio" name="rating" value="1" required /><span>★</span></label>
+                  <label class="star-option"><input type="radio" name="rating" value="2" /><span>★</span></label>
+                  <label class="star-option"><input type="radio" name="rating" value="3" /><span>★</span></label>
+                  <label class="star-option"><input type="radio" name="rating" value="4" /><span>★</span></label>
+                  <label class="star-option"><input type="radio" name="rating" value="5" /><span>★</span></label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="remarkMessage">Remarks</label>
+                <textarea id="remarkMessage" name="message" rows="5" placeholder="Tell us what you need or how we can help" required></textarea>
+              </div>
+              <button type="submit" class="button form-submit">Send remark</button>
+            </form>
+          </div>
+          <div class="contact-form-card" id="orderModal" hidden role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+            <div class="contact-form-head">
+              <h3 id="orderModalTitle">Order or Request Quote</h3>
+              <button type="button" class="button button-inline contact-modal-close" id="contactModalCloseButton" hidden>Close</button>
+            </div>
+            <p class="gallery-admin-note">Submit your request and we will confirm pricing and delivery quickly.</p>
+            <form id="orderInquiryForm">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required />
+                <input type="text" id="name" name="name" minlength="2" maxlength="160" autocomplete="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="\+?[0-9][0-9 .()\-]{7,24}" maxlength="25" autocomplete="tel" placeholder="+2547XXXXXXXX" required />
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <input type="email" id="email" name="email" maxlength="254" autocomplete="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="location">Pinned Location</label>
+                <div class="inline-form-actions">
+                  <input type="text" id="location" name="location" maxlength="500" placeholder="Use current location or paste Google Maps pin" required />
+                  <button type="button" class="button button-inline" id="pinLocationButton">Pin Current Location</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="produceSelect">Produce</label>
+                <select id="produceSelect" name="produce" required>
+                  <option value="">Loading produce...</option>
+                </select>
+              </div>
+              <div class="order-grid">
+                <div class="form-group">
+                  <label for="kgsSupplied">Amount of Kilograms (KGS)</label>
+                  <input type="number" id="kgsSupplied" name="kgsSupplied" min="0.01" max="10000" step="0.01" placeholder="Required kilograms" required />
+                </div>
+                <div class="form-group">
+                  <label for="unitPrice">Unit Price (KES)</label>
+                  <input type="number" id="unitPrice" name="unitPrice" readonly />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-method-toggle" role="radiogroup" aria-label="Payment method" id="paymentMethodToggle">
+                  <label class="payment-option-card" role="radio" aria-checked="true" data-value="pay_now">
+                    <input type="radio" name="paymentOption" value="pay_now" checked />
+                    <span class="payment-option-check" aria-hidden="true">✓</span>
+                    <div class="payment-option-header">
+                      <span class="payment-option-icon">💳</span>
+                      <span class="payment-option-title">Pay Now</span>
+                    </div>
+                  </label>
+                  <label class="payment-option-card" role="radio" aria-checked="false" data-value="payment_on_delivery">
+                    <input type="radio" name="paymentOption" value="payment_on_delivery" />
+                    <span class="payment-option-check" aria-hidden="true">✓</span>
+                    <div class="payment-option-header">
+                      <span class="payment-option-icon">🚚</span>
+                      <span class="payment-option-title">Pay on Delivery</span>
+                    </div>
+                    <span class="payment-option-description">Pay when your order is delivered.</span>
+                  </label>
+                </div>
+                <p class="payment-help-text">Pay to this account. Here are the bank details.</p>
+                <select id="paymentOption" hidden aria-hidden="true">
+                  <option value="pay_now" selected>Pay Now</option>
+                  <option value="payment_on_delivery">Pay on Delivery</option>
+                </select>
+              </div>
+              <div class="order-grid" id="bankFields" hidden>
+                <!--<div class="form-group">
+                  <label for="bankSelect">Pay to this account</label>
+                  <select id="bankSelect" name="bankSelect">
+                    <option value="">Loading bank accounts...</option>
+                  </select>
+                </div>-->
+                <div class="form-group bank-preview-group" id="bankDetailsPreview" hidden>
+                  <label>Payment details</label>
+                  <div class="safe-bank-preview"></div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us what you need" required></textarea>
+                <textarea id="message" name="message" rows="5" maxlength="4000" placeholder="Tell us what you need orany clarifications you want to make." required></textarea>
               </div>
-              <button type="submit" class="button form-submit">Send Message</button>
+              <p class="form-feedback form-feedback-neutral" id="orderFormStatus">Complete the form to send your order.</p>
+              <button type="submit" class="button form-submit">Submit my Order</button>
             </form>
           </div>
         </div>
@@ -287,12 +423,69 @@
     </main>
 
     <footer class="footer">
-      <p>Onestop Veggies · Fresh produce, delivered fast across Kenya.MD</p>
+      <div class="footer-panel">
+        <div class="footer-col">
+          <h3>Onestop Veggies</h3>
+          <p>Farm-fresh produce supply for retail, hospitality, and wholesale buyers across Kenya.</p>
+          <a class="button button-inline footer-login" href="#contact">Request a quote</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="../sales-ledger.html">Staff login</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="https://wa.me/254742623839" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.85 11.85 0 0 0 12.07 0C5.53 0 .2 5.32.2 11.86c0 2.09.55 4.13 1.58 5.94L0 24l6.37-1.68a11.82 11.82 0 0 0 5.7 1.46h.01c6.54 0 11.87-5.32 11.87-11.86 0-3.17-1.23-6.15-3.43-8.44ZM12.08 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.87 9.87 0 0 1-1.51-5.27c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.95 2.89a9.79 9.79 0 0 1 2.9 6.97c0 5.43-4.43 9.85-9.79 9.85Zm5.41-7.33c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.73.94-.9 1.13-.17.19-.34.22-.63.08-.29-.15-1.24-.46-2.35-1.47-.87-.78-1.45-1.75-1.62-2.04-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.55-.87-2.12-.23-.55-.47-.47-.64-.47h-.55c-.19 0-.49.07-.75.37-.26.29-.98.96-.98 2.35s1.01 2.74 1.15 2.93c.15.2 1.98 3.02 4.81 4.23.67.29 1.2.46 1.61.59.68.22 1.31.19 1.8.11.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"></path></svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 10.99 10.13 11.89v-8.41H7.08v-3.48h3.05V9.41c0-3.03 1.8-4.7 4.57-4.7 1.32 0 2.7.24 2.7.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.88v2.26h3.34l-.53 3.48h-2.81V24C19.61 23.06 24 18.09 24 12.07Z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/onestopveggies/" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path></svg>
+            </a>
+            <a href="https://www.tiktok.com/@onestop_veggies" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 aria-label="Visit OneStopVeggies on TikTok" 
+                 class="tiktok-social-link">
+                <svg xmlns="http://w3.org" viewBox="0 0 448 512" aria-hidden="true" class="tiktok-icon">
+                  <!-- Official, clean TikTok vector path -->
+                  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,18.87Z"/>
+                </svg>
+              </a>
+          </div>
+          <p class="footer-contact">+254 742 623839 · ONESTOPVEGGIESLTD@GMAIL.COM</p>
+        </div>
+      </div>
+      <p class="footer-note">Onestop Veggies · Fresh produce, delivered fast across Kenya.</p>
     </footer>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/254742623839?text=Hello!%20I%20would%20like%20to%20order%20fresh%20produce." target="_blank" rel="noreferrer">
-    <span>💬</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.85 11.85 0 0 0 12.07 0C5.53 0 .2 5.32.2 11.86c0 2.09.55 4.13 1.58 5.94L0 24l6.37-1.68a11.82 11.82 0 0 0 5.7 1.46h.01c6.54 0 11.87-5.32 11.87-11.86 0-3.17-1.23-6.15-3.43-8.44ZM12.08 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.87 9.87 0 0 1-1.51-5.27c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.02 6.95 2.89a9.79 9.79 0 0 1 2.9 6.97c0 5.43-4.43 9.85-9.79 9.85Zm5.41-7.33c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.73.94-.9 1.13-.17.19-.34.22-.63.08-.29-.15-1.24-.46-2.35-1.47-.87-.78-1.45-1.75-1.62-2.04-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.64-1.55-.87-2.12-.23-.55-.47-.47-.64-.47h-.55c-.19 0-.49.07-.75.37-.26.29-.98.96-.98 2.35s1.01 2.74 1.15 2.93c.15.2 1.98 3.02 4.81 4.23.67.29 1.2.46 1.61.59.68.22 1.31.19 1.8.11.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"></path></svg>
   </a>
+
+  <div id="globalLoader" class="global-loader" hidden aria-hidden="true">
+    <div class="md-loader">
+      <svg class="md-spinner" viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="md-spinner-ring" cx="60" cy="60" r="55" />
+      </svg>
+      <span class="md-text">MD</span>
+    </div>
+  </div>
+
+  <div class="contact-modal-backdrop" id="contactModalBackdrop" hidden></div>
+  <script defer src="./sw-register.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="./config.js"></script>
+  <script defer src="./script.js"></script>
 </body>
 </html>
